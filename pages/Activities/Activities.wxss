@@ -1,0 +1,58 @@
+/* pages/index/Activities.wxss */
+/*创建活动页面*/
+.container{
+  padding-top: 20rpx;
+}
+
+.title{
+  color: red;
+  margin: 30rpx;
+  font-size: 50rpx;
+}
+
+.input{
+  margin: 10rpx auto;  
+  display: flex;  
+  align-items: center;    
+  padding: 0 40rpx;   
+  background-color: #fff;  
+  font-size: 34rpx;  
+  color: #000;   
+}
+
+.input input{
+  height: 40rpx;
+  width: 450rpx;
+  padding: 10rpx;
+  background-color: #acd;
+  border-radius: 5px;
+}
+
+.input picker{
+  height: 40rpx;
+  width: 450rpx;
+  padding: 10rpx;
+  background-color: #acd;
+  border-radius: 5px;
+}
+
+.input .summary{
+  height: 300rpx;
+  width: 450rpx;
+  padding: 10rpx;
+  background-color: #acd;
+  border-radius: 5px;
+}
+
+.buttons{
+  margin: 10rpx auto;  
+  display: flex;  
+}
+
+.buttons button{
+  width: 500rpx;
+  text-align: center;
+  margin: 50rpx;
+  font-size: 34rpx;
+}
+

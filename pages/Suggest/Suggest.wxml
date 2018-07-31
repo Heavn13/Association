@@ -1,0 +1,7 @@
+<!--pages/Suggest/Suggest.wxml-->
+<!-- 建议页面 -->
+<view class='container'>
+  <textarea value='{{suggest}}' bindblur="onGetContent" type="text" maxlength='1000' placeholder='{{phold}}'>
+  </textarea>
+  <button type='primary' bindtap="onSubmit">提交建议</button>
+</view>

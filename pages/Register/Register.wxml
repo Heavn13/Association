@@ -1,0 +1,43 @@
+<!--pages/index/Register.wxml-->
+<!-- 注册页面 -->
+<view class='container'>
+   <view class="input">
+    <input value='{{name}}' class="nameInput" bindblur="onGetName" type="text" maxlength="20" placeholder="{{namePhold}}" />
+  </view>   
+  <view class="input">
+    <input value='{{id}}' class="idInput" bindblur="onGetId" type="number" maxlength="12" placeholder="{{idPhold}}" />
+  </view>
+  <view class="input">
+    <input value='{{password}}' class="passwordInput" bindblur="onGetPassword" type="password" maxlength="20" placeholder="{{passwordPhold}}" />
+  </view> 
+  <view class="input">
+    <input value='{{passwordAgain}}' class="passwordAgainInput" bindblur="onGetPasswordAgain" type="password" maxlength="20" placeholder="{{passwordAgainPhold}}" />
+  </view>
+  <view class="input">
+    <input value='{{phone}}' class="phoneInput" bindblur="onGetPhone" type="number" maxlength="11" placeholder="{{phonePhold}}" />
+  </view>  
+  <view class="input">
+    <picker bindchange="onCampusChange" value="{{campusIndex}}" range="{{campuses}}">  
+      {{campuses[campusIndex]}}   
+    </picker>
+  </view>
+  <view class="input">
+    <input value='{{college}}' class="collegeInput" bindblur="onGetCollege" type="text" maxlength="20" placeholder="{{collegePhold}}" />
+  </view>
+  <view class='choose'>
+    <label>是否唐社成员：</label>
+    <radio-group class="radio-group" bindchange="onRadioChange">
+      <block class="radio" wx:for="{{items}}" wx:key="i">
+          <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+      </block>
+    </radio-group>
+  </view>  
+  <view class="input" hidden='{{depart}}'>
+    <picker bindchange="onDepartmentChange" value="{{departmentIndex}}" range="{{departments}}">  
+      {{departments[departmentIndex]}}   
+    </picker>
+  </view> 
+  <view class='buttons'>
+    <button class="register" type='primary' bindtap="onRegister">注册并登录</button>
+  </view>
+</view>

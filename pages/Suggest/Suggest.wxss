@@ -1,0 +1,20 @@
+/* pages/Suggest/Suggest.wxss */
+/* 建议页面 */
+.container{
+  margin-top: 50rpx;
+}
+
+textarea{
+  padding: 20rpx;
+  width: 600rpx;
+  height: 400rpx;
+  border-radius: 10px;
+  background-color: #acd;
+}
+
+button{
+  width: 500rpx;
+  text-align: center;
+  margin: 50rpx;
+  font-size: 34rpx;
+}

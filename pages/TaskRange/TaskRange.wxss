@@ -1,0 +1,82 @@
+/* pages/TaskRange/TaskRange.wxss */
+/* 本任务的排名 */
+.container{
+  align-items: center;
+  margin: 10rpx;
+}
+
+label{
+  margin: 20rpx;
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.range{
+  margin: 10rpx;
+}
+
+label{
+  font-size: 50rpx;
+}
+
+.tasks{
+  margin: 20rpx;
+  background-color: #acd;
+  border-radius: 5px;
+  padding: 30rpx;
+  display:flex;
+}
+
+.tasks image{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.tasks .rank{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #1aad19;
+  font-size: 60rpx;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tasks .content{
+  width: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30rpx;
+}
+
+.tasks .content .realname{
+  font-size: 44rpx;
+  margin-bottom: 10rpx;
+}
+
+.tasks .content .name{
+  font-size: 35rpx;
+  margin-bottom: 10rpx;
+}
+
+.tasks .score{
+  margin-top: 10rpx;
+}
+
+.tasks .score text{
+  font-family: "华文行楷";
+  font-size: 60rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}

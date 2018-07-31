@@ -1,0 +1,71 @@
+/* pages/Chat/Chat.wxss */
+.container{
+  padding-top: 20rpx;
+}
+
+.chat_left{
+  margin: 20rpx;
+  display: flex;
+  float: left;  
+  position: relative;  
+  left: 10rpx;
+}
+
+.chat_left image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.chat_left text{
+  margin-top: 20rpx;
+  padding: 20rpx;
+  text-align: left;
+  font-size: 34rpx;
+  background-color: #acd;
+  border-radius: 5px; 
+}
+
+.chat_right{
+  margin: 20rpx;
+  display: flex;
+  float: right;  
+  position: relative;  
+  right: 40rpx;  
+}
+
+.chat_right .my_head{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+}
+
+.chat_right text{
+  margin-top: 30rpx;
+  padding: 20rpx;
+  text-align: right;
+  font-size: 34rpx;
+  background-color: #acd;
+  border-radius: 5px; 
+}
+
+form{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5rpx;
+}
+
+.ask_input_word{
+  background-color: #fff;
+  display: flex;
+  padding: 5rpx;
+}
+
+.ask_input_word input{
+  width: 70%;
+  padding: 10rpx;
+  background-color: #acd;
+  border-radius: 5px;
+  margin-left: 20rpx;
+}

@@ -1,0 +1,44 @@
+<!--pages/ManageTask/ManageTask.wxml-->
+<!-- 管理任务页面 -->
+<view class='containner'>
+  <view class='tasks'>
+  <view class='header'>
+    <button type='primary' bindtap='onCreateTask'>创建任务</button> 
+  </view>  
+  <label>我创建的诚信状</label>
+    <block wx:for="{{allitems}}" wx:key="i">
+        <!-- 该任务已完成 -->
+        <view wx:if="{{item.complete}}" class='alltask' data-id='{{item.objectId}}' bindtap='onTaskDetail' style='background-color:{{item.color}}'>
+          <view class='content' style="background-image: url('http://bmob-cdn-18655.b0.upaiyun.com/2018/05/20/0c576365406a8f4d8066aa2b1146199b.png')">
+            <text class='name'>{{item.name}}</text>
+            <view class='sign'>
+              <image src='../../images/currentNumber.png'></image>
+              <text class='currentNumber'>{{item.currentNumber}}</text>
+              <image src='../../images/totalNumber.png'></image>
+              <text class='number'>{{item.number}}</text>
+            </view>
+          </view>
+          <view class='right'>
+            <text class='score'>{{item.totalScore}}</text>
+          </view>
+        </view>
+        <!-- 该任务未完成 -->
+        <view wx:else class='mytask' class='alltask' data-id='{{item.objectId}}' bindtap='onTaskDetail' style='background-color:{{item.color}}'>
+        <view class='content'>
+            <text class='name'>{{item.name}}</text>
+            <view class='sign'>
+              <image src='../../images/signNumber.png'></image>
+              <text class='signNumber'>{{item.signNumber[item.index].count}}</text>
+              <image src='../../images/currentNumber.png'></image>
+              <text class='currentNumber'>{{item.currentNumber}}</text>
+              <image src='../../images/totalNumber.png'></image>
+              <text class='number'>{{item.number}}</text>
+            </view>
+          </view>
+          <view class='right'>
+            <text class='score'>{{item.totalScore}}</text>
+          </view>
+        </view>
+      </block>
+  </view> 
+</view>

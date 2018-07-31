@@ -1,0 +1,13 @@
+<!--pages/index/Main.wxml-->
+<!-- 首页 -->
+<view class='containner'>
+  <view class='activities'>
+  <label>活动列表</label>
+    <block wx:for="{{items}}" wx:key="i">
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <text class='name'>{{item.name}}</text>
+        <text class='time'>{{item.time}}</text>
+      </view>
+    </block>
+  </view>
+</view>

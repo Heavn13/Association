@@ -1,0 +1,31 @@
+/* pages/index/Login.wxss */
+/* 登录页面 */
+.input{
+  margin: 30rpx auto;  
+  display: flex;  
+  align-items: center;  
+  height: 88rpx;  
+  padding: 0 32rpx;   
+  background-color: #fff;  
+  font-size: 34rpx;  
+  color: #000;   
+}
+
+.input input{
+  margin-left: 20rpx;
+  padding: 10rpx;
+  background-color: #acd;
+  border-radius: 5px;
+}
+
+.buttons{
+  margin: 30rpx auto;  
+  display: flex;  
+}
+
+.buttons button{
+  width: 200rpx;
+  text-align: center;
+  margin: 50rpx;
+  font-size: 34rpx;
+}

@@ -1,0 +1,56 @@
+<!--pages/Calendar/Calendar.wxml-->
+<!-- 打卡日历页面 -->
+<view class='all'>
+  <view class="bar">
+    <!-- 上一个月 -->
+    <view class="previous" bindtap="handleCalendar" data-handle="prev">
+      <image src='../../images/pre.png'></image>
+    </view>
+    <!-- 显示年月 -->
+    <view class="date">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+    <!-- 下一个月 -->
+    <view class="next" bindtap="handleCalendar" data-handle="next">
+      <image src='../../images/next.png'></image>
+    </view>
+  </view>
+  <!-- 显示星期 -->
+  <view class="week">
+    <view wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+  </view>
+  <view class='days'>
+    <!-- 列 -->
+    <view class="columns" wx:for="{{days.length/7}}" wx:for-index="i" wx:key="i">
+      <view wx:for="{{days}}" wx:for-index="j" wx:key="j">
+        <!-- 行 -->
+        <view class="rows" wx:if="{{j/7 == i}}">
+          <view class="rows" wx:for="{{7}}" wx:for-index="k" wx:key="k">
+            <!-- 每个月份的空的单元格 -->
+            <view class='cell' wx:if="{{days[j+k].date == null}}">
+              <text decode="{{true}}">&nbsp;&nbsp;</text>
+            </view>
+            <!-- 每个月份的有数字的单元格 -->
+            <view class='cell' wx:else>
+              <!-- 当前日期已签到 -->
+              <view wx:if="{{days[j+k].isSign == true}}" style='background-color:#83C75D' class='cell'>
+                <text>{{days[j+k].date}}</text>
+              </view>
+              <!-- 当前日期未签到 -->
+              <view wx:else>
+                <text>{{days[j+k].date}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 坚持打卡天数 -->
+  <view class='count'>
+    <text>截至目前，你已坚持打卡</text>
+    <view class='daynumber'>
+    <text class='number'>{{count}}</text>
+    <text class='day'>天</text>
+    </view>    
+    <text>请再接再厉，继续努力</text>
+  </view>
+</view>

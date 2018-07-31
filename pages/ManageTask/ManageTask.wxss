@@ -1,0 +1,99 @@
+/* pages/ManageTask/ManageTask.wxss */
+/* 管理任务页面 */
+.container{
+  margin: 10rpx;
+}
+
+.header{
+  margin: 40rpx auto;   
+}
+
+.header button{
+  margin: 20rpx;
+  font-size: 34rpx;
+}
+
+label{
+  margin: 20rpx;
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.alltask{
+  margin: 20rpx;
+  padding: 20rpx;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.alltask .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rpx;
+  background-size: 180rpx;
+  background-repeat: no-repeat;
+  /* 让背景图片在右边显示 */
+  background-position-x: right;
+}
+
+.alltask .content .sign{
+  display: flex;
+}
+
+.alltask .content .name{
+  width: 400rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.alltask .content .sign .signNumber{
+  margin: auto 15rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.alltask .content .sign .currentNumber{
+  margin: auto 15rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.alltask .content .sign .number{
+  margin: auto 15rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.alltask .content image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+  margin-top: 15rpx;
+}
+
+.alltask .right{
+  display: flex;
+  margin-right: 50rpx;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  right: 10rpx;
+}
+
+.alltask .right text{
+  font-family: "华文行楷";
+  font-size: 60rpx;
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 60rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}

@@ -1,0 +1,30 @@
+<!--pages/index/Activities.wxml-->
+<!-- 创建活动页面 -->
+<view class='container'>
+  <label class='title'>山东大学唐仲英爱心社</label>
+  <view class="input">
+    <label>活动名称：</label>
+    <input value='{{activity_name}}' bindblur="onGetName" type="text" maxlength="100" />
+  </view>   
+  <view class="input">
+    <label>活动时间：</label>
+    <picker mode="date" value="{{activity_time}}" bindchange="listenerDatePickerSelected" >
+      <text>{{activity_time}}</text>
+    </picker>
+  </view> 
+  <view class="input">
+    <label>活动地点：</label>
+    <input value='{{activity_place}}' bindblur="onGetPlace" type="text" maxlength="100" />
+  </view> 
+  <view class="input">
+    <label>活动简介：</label>
+    <textarea class='summary' value='{{activity_summary}}' bindblur="onGetSummary" type="text" maxlength='1000'/>
+  </view>
+  <view class="input">
+    <label>活动人数：</label>
+    <input value='{{activity_number}}' bindblur="onGetNumber" type="number" maxlength="10" />
+  </view>  
+  <view class='buttons'>
+    <button class="create" type='primary' bindtap="onCreate">创建活动</button>
+  </view>
+</view>

@@ -1,0 +1,206 @@
+/* pages/Sign/Sign.wxss */
+/* 诚信状页面 */
+.swiper_tab {
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper_tab_list {
+  font-size: 34rpx;
+  display: inline-block;
+  width: 33%;
+  color: #777;
+}
+
+.on {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper_box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper_box .swiper-items{
+  margin-top: 20rpx;
+  height: 100%;
+}
+
+.swiper_box .swiper-items .task{
+  height: 100%;
+}
+
+.swiper_box button{
+  margin: 20rpx;
+  font-size: 34rpx;
+}
+
+.mytask{
+  margin: 20rpx;
+  padding: 20rpx;
+  border-radius: 10px;
+  display: flex; 
+}
+
+.mytask .content{
+  width: 450rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rpx;
+  background-size: 180rpx;
+  background-repeat: no-repeat;
+  /* 让背景图片在右边显示 */
+  background-position-x: right;
+}
+
+.mytask .content .name{
+  width: 400rpx;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.mytask .content .isSign{
+  font-size: 28rpx;
+  margin: 10rpx auto;
+  margin-top: 20rpx;
+  width: 400rpx;
+}
+
+.mytask .content .sign{
+  display: flex;
+  bottom: -10rpx;
+}
+
+.mytask .content .sign .signNumber {
+  margin: auto 15rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+
+.mytask .content .sign .currentNumber {
+  margin: auto 15rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+
+
+.mytask .content image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+  margin-top: 15rpx;
+}
+
+.mytask .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  right: 10rpx;
+  margin-top: 10rpx;
+}
+
+.mytask .right text{
+  font-family: "华文行楷";
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 60rpx;
+  margin-bottom: 10rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 50rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mytask button{
+  position: relative;
+  right: 10rpx;
+  width: 200rpx;
+}
+
+.alltask{
+  margin: 20rpx;
+  padding: 20rpx;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.alltask .content{
+  width: 450rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rpx;
+  background-size: 180rpx;
+  background-repeat: no-repeat;
+  /* 让背景图片在右边显示 */
+  background-position-x: right;
+}
+
+.alltask .content .sign{
+  display: flex;
+}
+
+.alltask .content .name{
+  width: 400rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.alltask .content .sign .signNumber{
+  margin: auto 15rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.alltask .content .sign .currentNumber{
+  margin: auto 15rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.alltask .content .sign .number{
+  margin: auto 15rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.alltask .content image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+  margin-top: 15rpx;
+}
+
+.alltask .right{
+  display: flex;
+  margin-right: 50rpx;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  right: 10rpx;
+}
+
+.alltask .right text{
+  font-family: "华文行楷";
+  font-size: 60rpx;
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 60rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}

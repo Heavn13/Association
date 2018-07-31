@@ -1,0 +1,5 @@
+<!--pages/index/Cover.wxml-->
+<!-- 封面 -->
+ <view class="test-bg">
+    <image src="http://bmob-cdn-18655.b0.upaiyun.com/2018/05/24/3e4e4be6404ac4ed80894101dcef9c67.png" class="bg-image" mode="scaleToFill"></image>
+</view>

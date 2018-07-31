@@ -1,0 +1,40 @@
+/* pages/index/Main.wxss */
+/* 首页 */
+.container{
+  align-items: center;
+  margin: 10rpx;
+}
+
+label{
+  margin: 20rpx;
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.activities{
+  margin: 10rpx;
+}
+
+label{
+  font-size: 50rpx;
+}
+
+.activity{
+  margin: 20rpx;
+  padding: 20rpx;
+  background-color: #acd;
+  border-radius: 5px;
+  padding-bottom: 50rpx;
+}
+
+.activity .name{
+  width: 100%;
+  margin-left: 20rpx;
+  display: flex;
+}
+
+.activity .time{
+  font-size: 30rpx;
+  float: right;
+}

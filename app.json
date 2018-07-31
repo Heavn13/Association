@@ -1,0 +1,61 @@
+{
+  "pages":[  
+    "pages/Cover/Cover",
+    "pages/Main/Main",    
+    "pages/ManageTask/ManageTask",    
+    "pages/Sign/Sign",
+    "pages/Calendar/Calendar",       
+    "pages/CreateTask/CreateTask",   
+    "pages/TaskRange/TaskRange",
+    "pages/Range/Range",        
+    "pages/TaskDetail/TaskDetail",                     
+    "pages/ManageActivity/ManageActivity",    
+    "pages/Detail/Detail",
+    "pages/Zone/Zone",
+    "pages/Activities/Activities",    
+    "pages/Suggest/Suggest",    
+    "pages/ChangeActivity/ChangeActivity",
+    "pages/ChangeTask/ChangeTask",              
+    "pages/Register/Register",    
+    "pages/Login/Login",                 
+    "pages/ActivityDetail/ActivityDetail",                     
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "山东大学唐仲英爱心社",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/homePage_g.png",
+        "iconPath": "images/homePage.png",
+        "pagePath": "pages/Main/Main",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/zone_g.png",
+        "iconPath": "images/zone.png",
+        "pagePath": "pages/Zone/Zone",
+        "text": "活动考核"
+      },
+      {
+        "selectedIconPath": "images/sign_g.png",
+        "iconPath": "images/sign.png",
+        "pagePath": "pages/Sign/Sign",
+        "text": "诚信状"
+      },
+      {
+        "selectedIconPath": "images/detail_g.png",
+        "iconPath": "images/detail.png",
+        "pagePath": "pages/Detail/Detail",
+        "text": "个人中心"
+      }
+    ]
+  } 
+}

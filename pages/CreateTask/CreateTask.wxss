@@ -1,0 +1,69 @@
+/* pages/CreateTask/CreateTask.wxss */
+/* 创建任务页面 */
+.container{
+  padding-top: 20rpx;
+}
+
+.input{
+  margin: 10rpx auto;  
+  display: flex;  
+  align-items: center;    
+  padding: 0 40rpx;   
+  background-color: #fff;  
+  font-size: 34rpx;  
+  color: #000;   
+}
+
+.input input{
+  height: 40rpx;
+  width: 450rpx;
+  padding: 10rpx;
+  background-color: #acd;
+  border-radius: 5px;
+}
+
+.input picker{
+  height: 50rpx;
+  width: 200rpx;
+  margin: 5rpx;
+  padding: 10rpx 5rpx;
+  text-align: center;
+  background-color: #acd;
+  border-radius: 5px;
+}
+
+.color{
+  margin: 10rpx 0rpx;
+  padding-top: 20rpx;  
+  align-items: center;       
+  background-color: #fff;  
+  font-size: 34rpx;  
+  color: #000;
+}
+
+.color label{
+  margin-left: -15rpx;
+}
+
+.color .radio-group{
+  margin: 30rpx auto;
+}
+
+.color .radio-group radio{
+  margin: 10rpx;
+  padding: 35rpx;
+  padding-left: 40rpx;
+  border-radius: 10px;
+}
+
+.buttons{
+  margin: 10rpx auto;  
+  display: flex;  
+}
+
+.buttons button{
+  width: 500rpx;
+  text-align: center;
+  margin: 50rpx;
+  font-size: 34rpx;
+}

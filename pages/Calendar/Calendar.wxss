@@ -1,0 +1,100 @@
+/* pages/Calendar/Calendar.wxss */
+/* 打卡日历 */
+.all{
+  margin-top: 20rpx;
+}
+
+.all .bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30rpx 20rpx;
+  padding: 10rpx;
+}
+
+.all .bar image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.all .week{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  margin: 20rpx;
+  border-radius: 10px;
+  background-color: #acd;
+}
+
+.all .days{
+  margin: 20rpx;
+  padding: 10rpx;
+  border-radius: 10px;
+  background-color: #acd;
+
+}
+
+.all .columns{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.all .columns .rows{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.all .columns .rows .cell{
+  width: 84rpx;
+  height: 88rpx;
+  margin: 3rpx;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.count .daynumber{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.count .daynumber .day{
+  margin-top: 50rpx;
+}
+
+.count{
+  margin: 20rpx;
+  padding: 30rpx;
+  display: flex;
+  text-align: center;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #acd;
+  align-items: center;
+}
+
+.count .number{
+  color: red;
+  font-size: 60rpx;
+  background-color: #fff;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20rpx;
+}
+
+.count text{
+  margin: 10rpx;
+}

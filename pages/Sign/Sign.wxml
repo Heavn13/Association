@@ -1,0 +1,94 @@
+<!--pages/Sign/Sign.wxml-->
+<!-- 诚信状页面 -->
+<view class="swiper_tab">
+  <view class="swiper_tab_list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="onSwichNav">我的任务</view>
+  <view class="swiper_tab_list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="onSwichNav">热门任务</view>
+</view>
+<!-- 滑动 -->
+<swiper current="{{currentTab}}" class="swiper_box" duration="300" style="height:{{winHeight - 40}}px" bindchange="onPageChange">
+  <!-- 我的任务 -->
+  <swiper-item class="swiper-items">
+    <scroll-view class='task' scroll-x="false" scroll-y="true">
+      <button type='primary' bindtap='onCreateTask'>创建任务</button>
+      <block wx:for="{{myitems}}" wx:key="i">
+        <!-- <view class='mytask'  style='background-color:{{item.color}}'> -->
+        <!-- 任务已完成 -->
+        <view wx:if="{{item.complete}}" class='mytask' style='background-color:{{item.color}}'>          
+          <view class='content' bindtap='onMyTaskDetail' data-id='{{item.activityid}}' style="background-image: url('http://bmob-cdn-18655.b0.upaiyun.com/2018/05/20/40fe9761407b7cee80062e26e8a605d3.png')" >
+            <text class='name'>{{item.taskname}}</text>
+            <view class='sign'>
+              <image src='../../images/currentNumber.png'></image>
+              <text class='currentNumber'>{{item.currentNumber}}</text>
+            </view>
+          </view>
+          <view class='right'>
+            <text class='score'>{{item.score}}</text>
+          </view>
+        </view>
+        <!-- 任务未完成 -->
+        <view wx:else class='mytask' style='background-color:{{item.color}}'>
+          <view class='content' bindtap='onMyTaskDetail' data-id='{{item.activityid}}'>
+            <text class='name'>{{item.taskname}}</text>
+            <text class='isSign'>{{item.signUp[item.index].isSign}}</text>
+            <view class='sign'>
+              <image src='../../images/signNumber.png'></image>
+              <text class='signNumber'>{{item.signNumber[item.index].count}}</text>
+              <image src='../../images/currentNumber.png'></image>
+              <text class='currentNumber'>{{item.currentNumber}}</text>
+            </view>
+          </view>
+          <view class='right'>
+            <text class='score'>{{item.score}}</text>
+            <view wx:if="{{item.signUp[item.index].isSign == '今日未打卡'}}">
+              <button type='primary' data-index='{{index}}' bindtap='onSignUp'>打卡</button>
+            </view>
+            <view wx:else>
+              <button type='primary' data-index='{{index}}' bindtap='onUn'>已打卡</button>
+            </view>
+          </view>
+        </view>
+        <!-- </view> -->
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <!-- 所有任务 -->
+  <swiper-item class="swiper-items">
+    <scroll-view scroll-x="false" scroll-y="true" class='task'>
+      <button type='primary' bindtap='onAllRange'>查看总排名</button>
+      <block wx:for="{{allitems}}" wx:key="i">
+        <!-- 任务已结束 -->
+        <view wx:if="{{item.complete}}" class='alltask' data-id='{{item.objectId}}' bindtap='onTaskDetail' style='background-color:{{item.color}}'>
+          <view class='content' style="background-image: url('http://bmob-cdn-18655.b0.upaiyun.com/2018/05/20/0c576365406a8f4d8066aa2b1146199b.png')">
+            <text class='name'>{{item.name}}</text>
+            <view class='sign'>
+              <image src='../../images/currentNumber.png'></image>
+              <text class='currentNumber'>{{item.currentNumber}}</text>
+              <image src='../../images/totalNumber.png'></image>
+              <text class='number'>{{item.number}}</text>
+            </view>
+          </view>
+          <view class='right'>
+            <text class='score'>{{item.totalScore}}</text>
+          </view>
+        </view>
+        <!-- 任务未结束 -->
+        <view wx:else class='alltask' data-id='{{item.objectId}}' bindtap='onTaskDetail' style='background-color:{{item.color}}'>
+        <view class='content'>
+            <text class='name'>{{item.name}}</text>
+            <view class='sign'>
+              <image src='../../images/signNumber.png'></image>
+              <text class='signNumber'>{{item.signNumber[item.index].count}}</text>
+              <image src='../../images/currentNumber.png'></image>
+              <text class='currentNumber'>{{item.currentNumber}}</text>
+              <image src='../../images/totalNumber.png'></image>
+              <text class='number'>{{item.number}}</text>
+            </view>
+          </view>
+          <view class='right'>
+            <text class='score'>{{item.totalScore}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

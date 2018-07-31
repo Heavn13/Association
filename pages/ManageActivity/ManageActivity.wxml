@@ -1,0 +1,17 @@
+<!--pages/ManageActivity/ManageActivity.wxml-->
+<!-- 管理活动页面 -->
+<view class='containner'>
+  <view class='activities'>
+  <view class='header'>
+    <button type='primary' bindtap='onCreateActivities'>创建活动</button> 
+  </view>  
+  <label>我创建的活动</label>
+    <block wx:for="{{items}}" wx:key="i">
+      <view class='activity' bindtap='onDetail' data-id='{{item.objectId}}'>
+        <text class='name'>{{item.name}}</text>
+        <text class='time'>{{item.time}}</text>
+      </view>
+    </block>
+  </view>
+  
+</view>

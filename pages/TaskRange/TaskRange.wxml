@@ -1,0 +1,34 @@
+<!--pages/TaskRange/TaskRange.wxml-->
+<!-- 本任务的排名 -->
+<view class='containner'>
+  <view class='range'>
+    <label>本任务排名</label>
+    <block wx:for="{{items}}" wx:key="i">
+      <view class='tasks'>
+        <!-- 第一名 -->
+        <view wx:if="{{index==0}}">
+          <image src='../../images/gold_cup.png'></image>
+        </view>
+        <!-- 第二名 -->
+        <view wx:elif="{{index==1}}">
+          <image src='../../images/silver_cup.png'></image>
+        </view>
+        <!-- 第三名 -->
+        <view wx:elif="{{index==2}}">
+          <image src='../../images/blonze_cup.png'></image>
+        </view>
+        <!-- 其他 -->
+        <view wx:else>
+          <text class='rank'>{{index+1}}</text>
+        </view>
+        <view class='content'>
+          <text class='realname'>{{item.realname}}</text>
+          <text class='name'>{{item.taskname}}</text>
+        </view>
+        <view class='score'>
+        <text>{{item.score}}</text>
+        </view>        
+      </view>
+    </block>
+  </view>
+</view>

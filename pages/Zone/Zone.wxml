@@ -1,0 +1,13 @@
+<!--pages/index/Zone.wxml-->
+<!-- 活动考核页面 -->
+<view class='containner'>
+  <view class='activities'>
+  <label>我的活动</label>
+    <block wx:for="{{items}}" wx:key="i">
+      <view class='activity' bindtap='onDetail' data-id='{{item.activityid}}'>
+        <text class='name'>{{item.activityname}}</text>
+        <text class='time'>{{item.activitytime}}</text>
+      </view>
+    </block>
+  </view>
+</view>

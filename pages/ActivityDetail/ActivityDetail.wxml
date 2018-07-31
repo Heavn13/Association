@@ -1,0 +1,54 @@
+<!--pages/index/ActivitieDetail.wxml-->
+<!-- 活动详情页面 -->
+<view class='container'>
+  <label class='title'>山东大学唐仲英爱心社</label>
+  <view class="text">
+    <label>活动名称：</label>
+    <text>{{activity_name}}</text>
+  </view>
+  <view class="text">
+    <label>活动时间：</label>
+    <text>{{activity_time}}</text>
+  </view>
+  <view class="text">
+    <label>活动地点：</label>
+    <text>{{activity_place}}</text>
+  </view>
+  <view class="text">
+    <label>活动简介：</label>
+    <text class='summary'>{{activity_summary}}</text>
+  </view>
+  <view class="text">
+    <label>活动人数：</label>
+    <text>{{activity_number}}</text>
+  </view>
+  <view class="text">
+    <label>当前人数：</label>
+    <text>{{activity_currentNumber}}</text>
+  </view>
+  <!-- 如果已报名 -->
+  <view wx:if="{{enroll}}">
+    <view class='panel'>
+      <view class='buttons'>
+        <button class="unenroll" type='primary' bindtap="onUnEnroll">取消报名</button>
+        <!-- 未签到 -->
+        <view wx:if="{{!signUp}}">
+          <button class="sign" type='primary' bindtap="onSign">签到</button>
+        </view>
+        <!-- 已签到 -->
+        <view wx:else>
+          <button class="sign" type='primary'>已签到</button>
+        </view>
+      </view>
+      <button class="generate" type='primary' bindtap="onGenQrc">生成签到二维码</button>
+      <view class="img-box">
+        <canvas bindtap="onPreviewQrc" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="qrcCanvas" />
+      </view>
+    </view>
+  </view>
+  <!-- 如果未报名 -->
+  <view wx:else>
+    <button class="enroll" type='primary' bindtap="onEnroll">报名</button>
+  </view>
+
+</view>

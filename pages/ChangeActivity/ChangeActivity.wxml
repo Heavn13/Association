@@ -1,0 +1,49 @@
+<!--pages/ChangeActivity/ChangeActivity.wxml-->
+<!-- 修改活动详情页面 -->
+<view class='container'>
+  <label class='title'>山东大学唐仲英爱心社</label>
+  <view class="input">
+    <label>活动名称：</label>
+    <input value='{{activity_name}}' bindblur="onGetName" type="text" maxlength="100" />
+  </view>   
+  <view class="input">
+    <label>活动时间：</label>
+    <picker mode="date" value="{{activity_time}}" bindchange="listenerDatePickerSelected" >
+      <text>{{activity_time}}</text>
+    </picker>
+  </view> 
+  <view class="input">
+    <label>活动地点：</label>
+    <input value='{{activity_place}}' bindblur="onGetPlace" type="text" maxlength="100" />
+  </view> 
+  <view class="input">
+    <label>活动简介：</label>
+    <textarea class='summary' value='{{activity_summary}}' bindblur="onGetSummary" type="text" maxlength='1000'/>
+  </view>
+  <view class="input">
+    <label>活动人数：</label>
+    <input value='{{activity_number}}' bindblur="onGetNumber" type="number" maxlength="10" />
+  </view>
+  <view class="text">
+    <label>当前人数：</label>
+    <text>{{activity_currentNumber}}</text>
+  </view>
+  <!-- 当前活动的报名情况 -->
+  <view class="person">
+    <label>当前活动报名情况：</label>
+    <label class='look' bindtap='onLook'>{{look}}</label>
+    <view hidden='{{people}}'>
+    <block wx:for="{{items}}" wx:key="i">
+      <view class='activity'>
+        <text class='name'>{{item.realname}}</text>
+        <text class='depart'>({{item.department}})</text>
+        <text class='campus'>{{item.campus}}</text>        
+      </view>
+    </block>
+    </view>   
+  </view> 
+  <view class='buttons'>
+    <button class="save" type='primary' bindtap="onSave">修改活动</button>
+    <button class="delete" type='primary' bindtap="onDelete">删除活动</button>
+  </view>
+</view>

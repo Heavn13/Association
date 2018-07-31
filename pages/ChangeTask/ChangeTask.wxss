@@ -1,0 +1,89 @@
+/* pages/ChangeTask/ChangeTask.wxss */
+/* 修改任务页面 */
+.container{
+  margin-top: -10rpx;
+}
+
+.details{
+  width: 80%;
+  margin: 30rpx;
+  padding: 30rpx;
+  border-radius: 20px;
+  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details .background{
+  background-repeat: no-repeat;
+  background-size: 350rpx;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.details .score{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -200rpx;
+}
+
+.details .score text{
+  font-size: 70rpx;
+  border-radius: 50%;
+  width: 200rpx;
+  height: 200rpx;
+  font-family: "华文行楷";
+  border: solid 10rpx #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.details .score label{
+  margin-top: -75rpx;
+}
+
+.name text{
+  font-size: 50rpx;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+
+
+.details .time{
+  font-size: 34rpx;
+  margin: 20rpx auto;
+}
+
+.details .text{
+  font-size: 34rpx;
+}
+
+.details .text image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: -10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.panel .buttons{
+  display: flex;
+}
+
+.panel button{
+  margin: 30rpx auto;
+  width: 550rpx;
+  font-size: 34rpx;
+  text-align: center;
+}

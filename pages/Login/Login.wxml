@@ -1,0 +1,17 @@
+<!--pages/index/Login.wxml-->
+<!-- 登录页面 -->
+<view class='container'>
+  <view class="input">
+    <label>账号：</label>
+    <input value='{{account}}' bindblur="onGetAccount" type="number" maxlength="12" placeholder="{{accountPhold}}" />
+  </view>  
+  <view class="input">
+    <label>密码：</label>
+    <input value='{{password}}' bindblur="onGetPassword" type="password" maxlength="20" placeholder="{{passwordPhold}}" />
+  </view>   
+  <view class='buttons'>
+    <button class="login" type='primary' bindtap="onLogin">登录</button>
+    <button class="register" type='primary' bindtap="onRegister">注册</button>
+  </view>
+</view>
+

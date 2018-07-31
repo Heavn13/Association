@@ -1,0 +1,55 @@
+/* pages/index/Register.wxss */
+/* 注册页面 */
+.container{
+  margin-top: -110rpx;
+}
+.input{
+  margin: 10rpx auto;  
+  display: flex;  
+  align-items: center;  
+  height: 80rpx;  
+  padding: 0 40rpx;   
+  background-color: #fff;  
+  font-size: 34rpx;  
+  color: #000;   
+}
+
+.choose{
+  margin: 10rpx auto;  
+  display: flex;  
+  align-items: center;  
+  height: 80rpx;   
+  width: 450rpx;
+  padding: 10rpx;
+  background-color: #acd;
+  border-radius: 5px;
+  font-size: 34rpx;  
+  color: #000; 
+
+}
+
+.input input{
+  width: 450rpx;
+  padding: 10rpx;
+  background-color: #acd;
+  border-radius: 5px;
+}
+
+picker{
+  width: 450rpx;
+  padding: 10rpx;
+  background-color: #acd;
+  border-radius: 5px;
+}
+
+.buttons{
+  margin: 20rpx auto;  
+  display: flex;  
+}
+
+.buttons button{
+  width: 500rpx;
+  text-align: center;
+  margin: 50rpx;
+  font-size: 34rpx;
+}

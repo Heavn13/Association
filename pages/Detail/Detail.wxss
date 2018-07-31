@@ -1,0 +1,70 @@
+/* pages/index/Detail.wxss */
+/* 个人详情页面 */
+.container{
+  padding-top: 20rpx;
+}
+
+.head{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.header{
+  width: 480rpx;
+  margin-top: 50rpx;
+  padding: 30rpx;
+  display: flex;
+  background-color: #acd;
+  margin-bottom: 30rpx;
+  border-radius: 10px;
+}
+
+.header .item{
+  align-items: left;
+  width: 300rpx;
+  margin-left: 50rpx;
+  padding-top: 30rpx;
+}
+
+.header .name{
+  font-size: 40rpx;
+}
+
+.header .id{
+  display: flex;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+
+.content{
+  padding: 20rpx;
+  background-color: #acd;
+  border-radius: 10px;
+}
+
+.content .item{
+  padding: 10rpx;  
+  display: flex; 
+  align-items: center;      
+  font-size: 34rpx;   
+}
+
+.content .item text{
+  width: 450rpx;
+  padding: 20rpx;
+  text-align: left;
+  font-size: 34rpx;
+  background-color: #eee;  
+  border-radius: 5px; 
+}
+
+.bottom{
+  margin: 20rpx auto;   
+}
+
+.bottom button{
+  width: 540rpx;
+  text-align: center;
+  margin: 20rpx;
+  font-size: 34rpx;
+}

@@ -1,0 +1,98 @@
+<!--pages/TaskDetail/TaskDetail.wxml-->
+<!-- 任务详情页面 -->
+<view class='container'>
+<!-- 当前任务未完成 -->
+  <view wx:if="{{!complete}}" class='details' style='background-color:{{color}}'>
+    <view class="score">
+      <text style='background-color:{{color}}'>{{totalScore}}</text>
+      <label>总积分</label>
+    </view>
+    <view class="name">
+      <text>{{name}}</text>
+    </view>
+    <view class="time">
+      <text>{{begin_time}}</text> to
+      <text>{{end_time}}</text>
+    </view>
+    <view class='icons'>
+      <view class="text">
+        <image src='../../images/days.png'></image>
+        <text>任务天数：{{days}}</text>
+      </view>
+      <view class="text">
+        <image src='../../images/signNumber.png'></image>
+        <text>今日签到人数：{{signNumber[index].count}}</text>
+      </view>
+      <view class="text">
+        <image src='../../images/currentNumber.png'></image>
+        <text>当前报名人数：{{currentNumber}}</text>
+      </view>
+      <view class="text">
+        <image src='../../images/totalNumber.png'></image>
+        <text>任务总人数：{{totalnumber}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 当前任务已完成 -->
+  <view wx:else class='details' style='background-color:{{color}}'>
+    <view class='background' style="background-image: url('http://bmob-cdn-18655.b0.upaiyun.com/2018/05/20/0c576365406a8f4d8066aa2b1146199b.png')">
+      <view class="score">
+        <text style='background-color:{{color}}'>{{totalScore}}</text>
+        <label>总积分</label>
+      </view>
+      <view class="name">
+        <text>{{name}}</text>
+      </view>
+      <view class="time">
+        <text>{{begin_time}}</text> to
+        <text>{{end_time}}</text>
+      </view>
+      <view class='icons'>
+        <view class="text">
+          <image src='../../images/days.png'></image>
+          <text>任务天数：{{days}}</text>
+        </view>
+        <view class="text">
+          <image src='../../images/currentNumber.png'></image>
+          <text>当前报名人数：{{currentNumber}}</text>
+        </view>
+        <view class="text">
+          <image src='../../images/totalNumber.png'></image>
+          <text>任务总人数：{{totalnumber}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮区域 -->
+  <view class='panel'>
+    <!-- 当前任务已报名并且未结束 -->
+    <view wx:if="{{enroll && !complete}}">
+      <view class='buttons'>
+        <button class="join" type='primary' bindtap="onExit">退出</button>
+        <!-- 当前任务已打卡 -->
+        <view wx:if="{{!signUp}}">
+          <button class="join" type='primary' bindtap="onSign">打卡</button>
+        </view>
+         <!-- 当前任务未打卡 -->
+        <view wx:else>
+          <button class="join" type='primary'>已打卡</button>
+        </view>
+      </view>
+      <button class="range" type='primary' bindtap="onCalendar">查看打卡日历</button>
+      <button class="range" type='primary' bindtap="onRange">查看本任务排名</button>
+    </view>
+    <!-- 当前任务未报名并且未结束 -->
+    <view wx:elif="{{!enroll && !complete}}">
+      <button class="join" type='primary' bindtap="onJoin">加入</button>
+    </view>
+    <!-- 当前任务已报名并且已结束 -->
+    <view wx:elif="{{enroll && complete}}">
+      <button class="range" type='primary' bindtap="onCalendar">查看打卡日历</button>
+      <button class="range" type='primary' bindtap="onRange">查看本任务排名</button>
+    </view>
+    <!-- 当前任务未报名并且已结束 -->
+    <view wx:else>
+      <button class="range" type='primary' bindtap="onRange">查看本任务排名</button>
+    </view>
+  </view>
+</view>

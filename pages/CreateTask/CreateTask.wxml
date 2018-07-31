@@ -1,0 +1,35 @@
+<!--pages/CreateTask/CreateTask.wxml-->
+<!-- 创建任务页面 -->
+<view class='container'>
+  <view class="input">
+    <label>任务内容：</label>
+    <input value='{{task_name}}' bindblur="onGetName" type="text" maxlength="20" />
+  </view>   
+  <view class="input">
+    <label>起止时间：</label>
+    <!-- 开始时间 -->
+    <picker mode="date" value="{{begin_time}}" bindchange="beginDatePickerSelected" >
+      <text>{{begin_time}}</text>
+    </picker>
+    to
+    <!-- 结束时间 -->
+    <picker mode="date" value="{{end_time}}" bindchange="endDatePickerSelected" >
+      <text>{{end_time}}</text>
+    </picker>
+  </view> 
+  <view class="input">
+    <label>任务人数：</label>
+    <input value='{{task_number}}' bindblur="onGetNumber" type="number" maxlength="10" />
+  </view>
+  <view class="color">
+    <label>任务标签颜色：</label>
+    <radio-group class="radio-group" bindchange="onRadioChange">
+      <block class="radio" wx:for="{{items}}" wx:key="i">        
+        <radio style='background-color:{{item.color}}' value="{{item.color}}" checked="{{item.checked}}"/>  
+      </block>
+    </radio-group>
+  </view>  
+  <view class='buttons'>
+    <button class="create" type='primary' bindtap="onCreate">创建任务</button>
+  </view>
+</view>

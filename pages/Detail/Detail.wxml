@@ -1,0 +1,36 @@
+<!--pages/index/Detail.wxml-->
+<!-- 个人详情页面 -->
+<view class='container'>
+  <view class='header'>
+    <view class='head'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>    
+    <view class='item'>
+      <text class='name'>{{name}}</text>
+    <text class='id'>{{id}}</text>
+    </view>    
+  </view>
+  <view class='content'>
+    <view class='item'>
+      <text class='campus'>{{campus}}</text>
+    </view>
+    <view class='item'>
+      <text class='college'>{{college}}</text>
+    </view>
+    <view class='item'>
+      <text class='department'>{{department}}</text>
+    </view>
+    <view class='item'>
+      <text class='phone'>{{phone}}</text>
+    </view>    
+  </view>
+  <!-- 按钮功能区域 -->
+  <view class='bottom'>    
+    <button type='primary' bindtap='onManageActivities'>管理活动</button> 
+    <button type='primary' bindtap='onManageTask'>管理任务</button>
+    <!-- <button type='primary' bindtap='onGrant'>活动授权</button>   -->
+    <button type='primary' bindtap='onSuggest'>意见反馈</button>     
+    <button type='primary' bindtap='onLogOut'>注销账号</button>    
+  </view>
+</view>
+
